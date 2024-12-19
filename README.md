@@ -42,6 +42,11 @@ utilisateurs, la gestion des produits et un tableau de bord avec le CRUD utilisa
    cd frontend
    npm run dev
    ```
+3. Créer un .env dans le backend avec ces variables
+   ```bash
+    JWT_SECRET=[remplacer ici avec votre secret_key ]
+    JWT_EXPIRES_IN=[remplacer ici pour determiner la durée de vie du token]
+    ``` 
 
 ## Packages Utilisés
 
