@@ -66,13 +66,13 @@ export default function UsersTable({ users, setUsers }) {
   const handleDelete = (row) => {
     try {
       const token = localStorage.getItem("token");
-      axios.delete(`http://localhost:8081/users/${id}`, {
+      axios.delete(`http://localhost:8081/users/${row._id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
       toast.error("Utilisateur supprimé avec succès");
-      setUsers(users.filter((user) => user._id !== id));
+      setUsers(users.filter((user) => user._id !== row._id));
     } catch (error) {
       console.error(error);
     }

@@ -22,6 +22,7 @@ export default function Login() {
       toast.success(`Bienvenue ${response.data.user.name}`);
       setIsLogged(true);
     } catch (error) {
+      toast.error("Erreur lors de la connexion");
       console.error(error);
     }
   };
